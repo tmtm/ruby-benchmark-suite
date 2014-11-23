@@ -19,12 +19,12 @@ for i in ifp = open(basename)
 end
 ifp.close
 
-parts = fline / lines + 1
+parts = (fline.div lines) + 1
 
 for i in ifp = open(basename)
   if line == 0
     ofp = open(sprintf("%s.%s%02d", basename, extname, part), "w")
-    printf(ofp, "%s part%02d/%02d\n", basename, part, parts)
+    ofp.printf("%s part%02d/%02d\n", basename, part, parts)
     ofp.write("BEGIN--cut here--cut here\n")
   end
   ofp.write(i)
@@ -47,4 +47,4 @@ Bench.run [300] do |n|
   n.times { go }
 end
 
-for file in Dir['file_to_split.txt.*']; File.delete file; end
+for file in Dir.glob('file_to_split.txt.*'); File.delete file; end

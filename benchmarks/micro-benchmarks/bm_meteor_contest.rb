@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have Integer#[] method
+
 # The Computer Language Shootout
 #   http://shootout.alioth.debian.org
 #   contributed by Kevin Barnes (Ruby novice)

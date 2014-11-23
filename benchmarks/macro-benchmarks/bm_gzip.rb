@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have zlib & stringio library
+
 # This uses ActiveSupport's compress and decompress methods
 
 require 'zlib'

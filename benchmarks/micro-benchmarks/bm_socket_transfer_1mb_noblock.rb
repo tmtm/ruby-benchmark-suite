@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have Thread class
+
 require 'socket'
 
 def write_meg(block_size)

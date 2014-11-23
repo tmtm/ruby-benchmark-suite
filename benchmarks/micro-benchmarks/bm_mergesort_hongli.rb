@@ -31,7 +31,7 @@ def mergesort(a)
 	l1 = []
 	l2 = []
 	i = 0
-	while i < n / 2
+	while i < n.div(2)
 		l1 << a[i]
 		i += 1
 	end

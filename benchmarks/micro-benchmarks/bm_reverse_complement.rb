@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have String#tr method
+
 # The Great Computer Language Shootout
 # http://shootout.alioth.debian.org/
 #

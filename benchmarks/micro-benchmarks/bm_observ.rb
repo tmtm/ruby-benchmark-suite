@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have Thread class
+
 # exercise the 'observer' pattern
 # from ruby_trunk/sample/observ.rb
 

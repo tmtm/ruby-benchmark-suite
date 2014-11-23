@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have Matrix class
+
 # Submitted by M. Edward (Ed) Borasky
 require './hilbert' # also brings in mathn, matrix, rational and complex
 

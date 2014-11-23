@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have ffi library
+
 begin
   require 'ffi'
 rescue LoadError

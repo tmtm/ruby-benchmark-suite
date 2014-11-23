@@ -1,6 +1,11 @@
 
-require 'fiber'
-require 'benchmark'
+begin
+  require 'fiber'
+rescue LoadError
+  # for mruby
+end
+
+#require 'benchmark'
 
 class Ring
    attr_reader :id

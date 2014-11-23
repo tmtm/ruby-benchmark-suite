@@ -46,7 +46,7 @@ def make_repeat_fasta(id, desc, src, n)
     v = nil
     width = 60
     l = src.length
-    s = src * ((n / l) + 1)
+    s = src * ((n.div l) + 1)
     s.slice!(n, l)
     puts (s.scan(/.{1,#{width}}/).join("\n"))
 end
@@ -58,7 +58,7 @@ def make_random_fasta(id, desc, table, n)
     chunk = 1 * width
     prob = 0.0
     table.each{|v| v[1]= (prob += v[1])}
-    for i in 1..(n/width)
+    for i in 1..(n.div width)
         puts (1..width).collect{
             rand = gen_random(1.0)
             table.find{|v| v[1]>rand}[0]

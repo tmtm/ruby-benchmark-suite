@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have String#count method
+
 # $Id: wc-ruby.code,v 1.4 2004/11/13 07:43:32 bfulgham Exp $
 # http://www.bagley.org/~doug/shootout/
 # with help from Paul Brannan

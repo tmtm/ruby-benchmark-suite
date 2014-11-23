@@ -9,8 +9,8 @@ def valid?(state, x, y)
   end
 
   # check in box
-  x_from = (x / 3) * 3
-  y_from = (y / 3) * 3
+  x_from = (x.div 3) * 3
+  y_from = (y.div 3) * 3
   x_from.upto(x_from + 2) do |xx|
     y_from.upto(y_from + 2) do |yy|
       return false if (xx != x or yy != y) and state[xx][yy] ==
@@ -27,7 +27,7 @@ def next_state(state, x, y)
   y = 0 and x = x + 1 if y == 9
   return true if x == 9
 
-  unless state[x][y].zero?
+  unless state[x][y] == 0
     return false unless valid?(state, x, y)
     return next_state(state, x, y + 1)
   else

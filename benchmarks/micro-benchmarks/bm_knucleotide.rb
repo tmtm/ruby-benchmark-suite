@@ -9,7 +9,7 @@ def frecuency(seq, length)
   n, table = seq.length - length + 1, Hash.new(0)
   f, i = nil, nil
   (0 ... length).each do |f|
-      (f ... n).step(length) do |i|
+      f.step(n-1, length) do |i|
           table[seq[i,length]] += 1
       end
   end

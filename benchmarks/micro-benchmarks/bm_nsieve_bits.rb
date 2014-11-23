@@ -1,3 +1,5 @@
+exit 1   # cannot run on Ruby 1.9 & mruby
+
 # The Great Computer Language Shootout
 # http://shootout.alioth.debian.org/
 #

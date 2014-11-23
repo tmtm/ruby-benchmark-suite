@@ -4,7 +4,7 @@ class Array
   def merge_sort
     len = self.length
     return self if len <= 1
-    middle = len / 2
+    middle = len.div 2
     left = self.slice(0, middle).merge_sort
     right = self.slice(middle, len - middle).merge_sort
     merge(left, right)

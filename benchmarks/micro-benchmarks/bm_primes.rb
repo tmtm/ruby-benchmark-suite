@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have mathn library
+
 # This tests the Prime class' generation speed.
 # 
 # Ruby 1.8 MRI has an extremely poor/naive implementation of Prime

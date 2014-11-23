@@ -23,7 +23,8 @@ else
 end
 
 start = Time.now
-system cmd
+system "ulimit -S -v 4194304; #{cmd}"
+#system cmd
 finish = Time.now
 
 unless $?.success?

@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have date llbrary
+
 #! /usr/bin/env ruby
 
 # cal.rb: Written by Tadayoshi Funaba 1998-2004,2006,2008

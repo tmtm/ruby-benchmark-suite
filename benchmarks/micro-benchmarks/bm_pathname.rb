@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have pathname library
+
 # Lists directories and files using
 # recursion and the Pathname class.
 # Submitted by Lukas Domagala

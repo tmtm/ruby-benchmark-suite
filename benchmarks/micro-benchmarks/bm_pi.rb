@@ -1,3 +1,5 @@
+exit 1 # because mruby occur Integer overflow
+
 #!/usr/local/bin/ruby
 # from ruby_trunk/sample/pi.rb
 

@@ -27,13 +27,13 @@ def kikaku(a)
   a.collect {|x| x - a[0]}
 end
 def ud(a)
-  kikaku(a.collect {|x| ((x+NP)%ROW)-ROW*((x+NP)/ROW) }.sort)
+  kikaku(a.collect {|x| ((x+NP)%ROW)-ROW*((x+NP).div ROW) }.sort)
 end
 def rl(a)
-  kikaku(a.collect {|x| ROW*((x+NP)/ROW)+ROW-((x+NP)%ROW)}.sort)
+  kikaku(a.collect {|x| ROW*((x+NP).div ROW)+ROW-((x+NP)%ROW)}.sort)
 end
 def xy(a)
-  kikaku(a.collect {|x| ROW*((x+NP)%ROW) + (x+NP)/ROW }.sort)
+  kikaku(a.collect {|x| ROW*((x+NP)%ROW) + (x+NP).div(ROW) }.sort)
 end
 
 def mkpieces

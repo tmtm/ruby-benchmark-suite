@@ -2,9 +2,8 @@
 def go filename
   # assume ARGV[0] is a log
   start_time = nil
-  float = /[\d]+\.[\d]+/
-  start_regex = /(#{float}).*starting up logger/
-  end_regex = /(#{float}).*DONE WITH WHOLE FILE/
+  start_regex = /([\d]+\.[\d]+).*starting up logger/
+  end_regex = /([\d]+\.[\d]+).*DONE WITH WHOLE FILE/
 
 =begin rubydoctest
 rubydoctest: can read

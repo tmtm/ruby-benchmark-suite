@@ -33,7 +33,7 @@ rnd = srand()	# You don't actually need this in ruby - srand() is called
         tt = rand(ss.length)
         c = ss[tt, 1]
       else
-        c = s[xl + hdw, 1]
+        c = s[(xl + hdw).to_i, 1]
         maxxl = xl
       end
       s += c

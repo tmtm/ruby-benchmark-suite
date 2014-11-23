@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have complex llbrary
+
 require 'complex'
 
 def mandelbrot?(z)

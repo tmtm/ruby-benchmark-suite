@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have Thread class
+
 def count_high how_many
   how_many.times {}
 end

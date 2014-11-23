@@ -1,3 +1,5 @@
+exit 1 # because mruby occur Integer overflow
+
 # Lucas–Lehmer primality test for Mersenne numbers (2**p - 1)
 
 def is_prime?(p)

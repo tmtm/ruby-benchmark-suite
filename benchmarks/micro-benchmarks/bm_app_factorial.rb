@@ -1,3 +1,5 @@
+exit 1 # because mruby occur Integer overflow
+
 def fact(n)
   if (n > 1)
     n * fact(n-1)

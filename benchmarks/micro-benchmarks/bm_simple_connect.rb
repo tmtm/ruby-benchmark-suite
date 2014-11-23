@@ -1,4 +1,8 @@
-require 'socket'
+begin
+  require 'socket'
+rescue LoadError
+  # for mruby
+end
 
 Bench.run [1, 100, 500] do |n|
   server = TCPServer.new '127.0.0.1', 0

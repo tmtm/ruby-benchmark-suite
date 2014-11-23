@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have Thread class
+
 # test context switching between two threads with very different stack sizes
 # from Brent Roman MBARI patches  bogus1.rb file
 # http://sites.google.com/site/brentsrubypatches/

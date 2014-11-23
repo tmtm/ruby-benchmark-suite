@@ -1,3 +1,5 @@
+exit 1 # because mruby don't have benchmark library
+
 # That ruby code is gonna show you that the Ruby version 1.9.3 manage strings in a different way. 
 # If you have one string with 23 or less characteres, it would be a way faster than a string with 24 or more.
 # All the credits to Pat Shaughnessy, http://patshaughnessy.net/2012/1/4/never-create-ruby-strings-longer-than-23-characters

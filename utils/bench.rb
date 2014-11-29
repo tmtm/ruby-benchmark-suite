@@ -105,7 +105,7 @@ class Bench
         end
         
         require 'rbconfig'
-        version_string += ';' + Config::CONFIG['CFLAGS'] + ';' + Config::CONFIG["configure_args"] + ';' + Config::CONFIG["bindir"]
+        version_string += ';' + RbConfig::CONFIG['CFLAGS'] + ';' + RbConfig::CONFIG["configure_args"] + ';' + RbConfig::CONFIG["bindir"]
       rescue Exception
       end
 

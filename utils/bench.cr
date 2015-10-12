@@ -14,8 +14,8 @@
 # number of iterations and then compute some statistics and append
 # a YAML-formatted report to the specified file.
 class Bench
-  attr_accessor :parameter
-  attr_reader   :times, :memory_readings, :sorted, :file, :name, :n, :report, :meter_memory
+  property :parameter
+  getter :times, :memory_readings, :sorted, :file, :name, :n, :report, :meter_memory
 
   def initialize(name, n, report, meter_memory)
 
@@ -23,7 +23,11 @@ class Bench
     @file   = File.basename name
     @n      = n.to_i
     @report = report
-    @meter_memory = meter_memory == 'yes' # default is yes
+    @meter_memory = meter_memory == "yes" # default is yes
+    @times = [] of Float64
+    @memory_readings = [] of (Int64 | Exception)
+    @mean  = nil
+    @sorted = [] of (Int64 | Exception)
   end
 
   def self.register(instance)
@@ -44,8 +48,8 @@ class Bench
   end
 
   def reset
-    @times = []
-    @memory_readings = []
+    @times = [] of Float64
+    @memory_readings = [] of (Int64 | Exception)
     @mean  = nil
   end
 
@@ -60,10 +64,10 @@ class Bench
         times << (finish - start).to_f
         if @meter_memory
           begin
-            kb = `ps -o rss= -p #{Process.pid}`.to_i # in kilobytes
+            kb = `ps -o rss= -p #{Process.pid}`.to_i64 # in kilobytes
             memory_used = kb*1024
             memory_readings << memory_used
-          rescue Exception => e
+          rescue e : Exception
             memory_readings << e
           end
         end

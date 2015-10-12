@@ -23,7 +23,7 @@ ifp.close
 
 parts = fline / lines + 1
 
-ofp = nil
+ofp :: File
 
 ifp = File.open(basename)
 ifp.each_line do |i|

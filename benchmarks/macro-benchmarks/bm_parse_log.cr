@@ -20,7 +20,7 @@ def go filename
         endy = $1.to_f
         break # break out of enumerator early
        end
-      rescue => e # encoding error...
+      rescue e # encoding error...
                puts line, line.inspect
                sleep 5
       end

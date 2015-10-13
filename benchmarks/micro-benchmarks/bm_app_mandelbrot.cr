@@ -13,13 +13,13 @@ def mandelbrot?(z)
 end
 
 Bench.run [1] do |n|
-  ary = []
+  ary = [] of Complex
 
   (0..100).each do |dx|
     (0..100).each do |dy|
       x = dx / 50.0
       y = dy / 50.0
-      c = Complex(x, y)
+      c = Complex.new(x, y)
       ary << c if mandelbrot?(c)
     end
   end

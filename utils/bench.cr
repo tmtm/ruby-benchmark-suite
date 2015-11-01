@@ -176,6 +176,15 @@ module Enumerable
   end
 end
 
+class Array
+  def include?(val)
+    includes?(val)
+  end
+  def length
+    size
+  end
+end
+
 struct Int
   def zero?
     self == 0

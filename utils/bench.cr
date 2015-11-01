@@ -185,6 +185,20 @@ class Array
   end
 end
 
+module Enumerable
+  def collect
+    map do |x|
+      yield x
+    end
+  end
+end
+
+class String
+  def length
+    self.size
+  end
+end
+
 struct Int
   def zero?
     self == 0

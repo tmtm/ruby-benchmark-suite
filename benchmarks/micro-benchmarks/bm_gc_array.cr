@@ -8,11 +8,11 @@ require "../../utils/bench"
 Bench.run [1] do |n|
   a = nil
   10.times do |i|
-    a = Array.new(100_000)
+    a = Array(Nil | Array(Nil)).new(100_000, nil)
     a.length.times do |x|
-      a[x] = Array.new(100)
+      a[x] = Array.new(100, nil)
       10.times do |y|
-        Array.new(100)
+        Array.new(100, nil)
       end
     end
   end

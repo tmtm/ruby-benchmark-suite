@@ -1,10 +1,11 @@
 # Lucas–Lehmer primality test for Mersenne numbers (2**p - 1)
 
 require "../../utils/bench"
+require "big_int"
 
 def is_prime?(p)
-  s = 4
-  m = 2**p - 1
+  s = BigInt.new(4)
+  m = BigInt.new(2)**p - 1
   (p-2).times do
     s = (s**2 - 2) % m
   end

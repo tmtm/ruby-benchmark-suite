@@ -13,7 +13,7 @@ class Array
   end
 
   def merge(left, right)
-    result = []
+    result = [] of Int32
 
     while (left.length > 0 && right.length > 0)
       if (left.first < right.first)

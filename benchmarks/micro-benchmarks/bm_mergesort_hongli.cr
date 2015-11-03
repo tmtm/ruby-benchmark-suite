@@ -3,7 +3,7 @@
 require "../../utils/bench"
 
 def merge(a, b)
-	c = []
+	c = [] of Int32
 	while !a.empty? && !b.empty?
 		if a[0] > b[0]
 			c << b[0]
@@ -30,8 +30,8 @@ def mergesort(a)
 		return a
 	end
 
-	l1 = []
-	l2 = []
+	l1 = [] of Int32
+	l2 = [] of Int32
 	i = 0
 	while i < n / 2
 		l1 << a[i]

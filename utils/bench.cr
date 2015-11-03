@@ -183,6 +183,9 @@ class Array
   def length
     size
   end
+  def slice(start, length)
+    self[start, length]
+  end
 end
 
 module Enumerable

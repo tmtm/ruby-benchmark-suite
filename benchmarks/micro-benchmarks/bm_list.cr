@@ -26,6 +26,10 @@ class MyElem
 end
 
 class MyList
+  def initialize
+    @tail :: MyElem
+  end
+
   def add_to_list(obj)
     elt = MyElem.new(obj)
     if @head

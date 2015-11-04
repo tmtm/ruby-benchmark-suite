@@ -26,7 +26,7 @@ def sieve(m)
 end
 
 m = 9
-Flags = Array.new((1 << 9) * 10_000, "\x1")
+Flags = Array(String|Int32).new((1 << 9) * 10_000, "\x1")
 
 Bench.run [m] do |n|
   n.downto(n-2) do |exponent|

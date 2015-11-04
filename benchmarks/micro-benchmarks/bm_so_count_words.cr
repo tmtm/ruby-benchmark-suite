@@ -10,7 +10,7 @@ def concatenate(n)
 
     nl = nw = nc = 0
     while true
-      data = (input.read(4096) || break) << (input.gets || "")
+      data = (input.read(4096) || break) + (input.gets || "")
       nc += data.length
       nl += data.count("\n")
       data = data.strip.tr("\n", " ").squeeze

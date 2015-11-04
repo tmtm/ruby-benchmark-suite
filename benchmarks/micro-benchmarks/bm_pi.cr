@@ -4,9 +4,10 @@
 
 
 require "../../utils/bench"
+require "big_int"
 
 Bench.run [1000, 10000] do |n|
-  k, a, b, a1, b1 = 2, 4, 1, 12, 4
+  k, a, b, a1, b1 = BigInt.new(2), BigInt.new(4), BigInt.new(1), BigInt.new(12), BigInt.new(4)
   n.times do
     # Next approximation
     p, q, k = k*k, 2*k+1, k+1

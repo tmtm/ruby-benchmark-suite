@@ -2,7 +2,7 @@ require "../../utils/bench"
 
 class Array
   def qsort
-    return [] if self.empty?
+    return [] of Int32 if self.empty?
     pivot = self[0]
     tail = self[1..-1]
     (tail.select {|el| el < pivot }).qsort + [pivot] +

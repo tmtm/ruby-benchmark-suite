@@ -205,6 +205,9 @@ class String
   def length
     self.size
   end
+  def slice(index, length)
+    self[index, length]
+  end
 end
 
 struct Int

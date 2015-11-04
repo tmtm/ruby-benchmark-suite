@@ -218,3 +218,15 @@ struct Int
     self.bit(n)
   end
 end
+
+module IO
+  def read(n : Int)
+    buffer = Slice(UInt8).new(n)
+    len = self.read(buffer)
+    if len == 0
+      return nil
+    else
+      return String.new(buffer[0, len])
+    end
+  end
+end

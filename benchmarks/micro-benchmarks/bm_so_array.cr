@@ -5,7 +5,7 @@
 require "../../utils/bench"
 
 Bench.run [9000] do |n|
-  x = Array.new(n)
+  x = Array(Int32).new(n, 0)
   y = Array.new(n, 0)
 
   n.times do |bi|

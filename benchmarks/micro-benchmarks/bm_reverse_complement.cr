@@ -8,13 +8,13 @@
 require "../../utils/bench"
 
 def revcomp(seq)
-  seq.reverse!.tr!("wsatugcyrkmbdhvnATUGCYRKMBDHVN","WSTAACGRYMKVHDBNTAACGRYMKVHDBN")
+  seq = seq.reverse.tr("wsatugcyrkmbdhvnATUGCYRKMBDHVN","WSTAACGRYMKVHDBNTAACGRYMKVHDBN")
   stringlen = seq.length
   0.step(stringlen-1,60) {|x| puts seq.slice(x,60) }
 end
 
 Bench.run [1] do |n|
-  seq = Array.new
+  seq = Array(String).new
 
   fname = File.dirname(__FILE__) + "/fasta.input" 
   File.open(fname, "r").each_line do |line|

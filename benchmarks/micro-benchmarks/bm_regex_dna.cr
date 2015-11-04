@@ -12,7 +12,7 @@ Bench.run [20] do |n|
     seq = File.read(fname)
     ilen = seq.size
 
-    seq.gsub!(/>.*\n|\n/,"")
+    seq = seq.gsub(/>.*\n|\n/,"")
     clen = seq.length
 
     [
@@ -31,7 +31,7 @@ Bench.run [20] do |n|
     "B" => "(c|g|t)", "D" => "(a|g|t)", "H" => "(a|c|t)", "K" => "(g|t)",
     "M" => "(a|c)", "N" => "(a|c|g|t)", "R" => "(a|g)", "S" => "(c|t)",
     "V" => "(a|c|g)", "W" => "(a|t)", "Y" => "(c|t)"
-    }.each { |f,r| seq.gsub!(f,r) }
+    }.each { |f,r| seq = seq.gsub(f,r) }
 
     puts
     puts ilen

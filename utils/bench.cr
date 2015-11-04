@@ -194,6 +194,11 @@ module Enumerable
       yield x
     end
   end
+  def collect!
+    map! do |x|
+      yield x
+    end
+  end
 end
 
 class String
@@ -205,5 +210,8 @@ end
 struct Int
   def zero?
     self == 0
+  end
+  def [](n)
+    self.bit(n)
   end
 end

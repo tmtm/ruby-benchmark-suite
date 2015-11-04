@@ -23,7 +23,7 @@ end
 def some_function(num)
   begin
     hi_function(num)
-  rescue => e
+  rescue e
     print "We shouldn't get here, exception is: #{e.class}\n"
   end
 end

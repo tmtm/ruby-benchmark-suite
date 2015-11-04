@@ -9,7 +9,7 @@ def test_lists(size)
   li2 = li1.dup
   # remove each individual item from left side of li2 and
   # append to right side of li3 (preserving order)
-  li3 = Array.new
+  li3 = Array(Int32).new
   while (! li2.empty?)
     li3.push(li2.shift)
   end

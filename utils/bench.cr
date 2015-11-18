@@ -175,3 +175,9 @@ module Enumerable
     end
   end
 end
+
+struct Int
+  def zero?
+    self == 0
+  end
+end

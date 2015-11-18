@@ -166,3 +166,12 @@ class Bench
   def puts(*args)
   end
 end
+
+# compatibility for Ruby
+module Enumerable
+  def find_all
+    select do |a|
+      yield a
+    end
+  end
+end

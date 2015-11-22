@@ -4,7 +4,7 @@ require "../../utils/bench"
 
 Bench.run [4000] do |num|
   count = i = j = 0
-  flags0 = Array.new(8192,true)
+  flags0 = Array(Bool).new(8192,true)
   k = 0
   while k < num
     k+=1

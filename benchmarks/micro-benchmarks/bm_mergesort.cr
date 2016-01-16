@@ -37,6 +37,6 @@ end
 
 Bench.run [1] do |n|
   fname = File.dirname(__FILE__) + "/random.input"
-  array = File.read(fname).split(/\n/).map{|m| m.to_i }
+  array = File.read(fname).split(/\n/).map{|m| m.to_i{0} }
   puts "Mergesort verified." if array.merge_sort == array.sort
 end

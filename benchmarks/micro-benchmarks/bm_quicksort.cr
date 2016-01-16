@@ -12,6 +12,6 @@ end
 
 Bench.run [1] do |n|
   fname = File.dirname(__FILE__) + "/random.input"
-  array = File.read(fname).split(/\n/).map{|m| m.to_i }
+  array = File.read(fname).split(/\n/).map{|m| m.to_i{0} }
   puts "Quicksort verified." if array.qsort == array.sort
 end

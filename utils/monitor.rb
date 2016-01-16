@@ -12,9 +12,9 @@ if RbConfig::CONFIG['host_os'] =~ /mswin|mingw/ # jruby compat.
   null = "NUL"
 end
 
-limit, vm, runner, name, iterations, report, meter_memory = ARGV
+limit, vm, name, iterations, report, meter_memory = ARGV
 
-cmd = "#{timeout} -t #{limit} #{vm} #{runner} #{name} #{iterations} #{report} #{meter_memory}"
+cmd = "#{timeout} -t #{limit} #{vm} #{name} #{name} #{iterations} #{report} #{meter_memory}"
 
 if ENV['VERBOSE']
   puts cmd

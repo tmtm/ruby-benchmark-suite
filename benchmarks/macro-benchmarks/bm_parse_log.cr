@@ -1,6 +1,6 @@
 require "../../utils/bench"
 
-def go filename
+def go(filename)
   # assume ARGV[0] is a log
   start_time = nil
   float = /[\d]+\.[\d]+/

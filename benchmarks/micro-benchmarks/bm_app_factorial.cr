@@ -1,3 +1,4 @@
+require "big_int"
 require "../../utils/bench"
 
 def fact(n)
@@ -9,5 +10,5 @@ def fact(n)
 end
 
 Bench.run [5000, 10000, 20000] do |n|
-  fact(n)
+  fact(BigInt.new(n))
 end

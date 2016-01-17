@@ -39,5 +39,5 @@ def test_lists(size)
 end
 
 Bench.run [1000] do |n|
-  n.times { p test_lists(10_000) }
+  n.times { test_lists(10_000) }
 end

@@ -149,7 +149,7 @@ class Bench
   end
 
   def mean
-    @mean ||= (times.inject(0) { |sum, t| sum + t }) / n
+    @mean ||= (times.reduce(0) { |sum, t| sum + t }) / n
   end
 
   def median
@@ -157,7 +157,7 @@ class Bench
   end
 
   def standard_deviation
-    Math.sqrt((times.inject(0) { |sum, t| sum + (mean - t) ** 2 }) / n)
+    Math.sqrt((times.reduce(0) { |sum, t| sum + (mean - t) ** 2 }) / n)
   end
 
   # Perhaps this should be configurable. Generally, it doesn't make
